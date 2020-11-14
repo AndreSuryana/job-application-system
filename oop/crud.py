@@ -36,7 +36,7 @@ class CRUD:
 
         current_date = datetime.datetime.now()
 
-        val = (username, passwd, nama, email, phone_num, address, apply, reason, qualification, currentdate, "false")
+        val = (username, passwd, nama, email, phone_num, address, apply, reason, qualification, current_date, "false")
         
         cursor.execute("INSERT INTO " + self._table_name + " (username, passwd, nama, email, phone_num, address, apply, applicant_reason, applicant_qualification, date_applied, accepted) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)", val)
 
