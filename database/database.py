@@ -35,7 +35,7 @@ class Database:
 
         cursor = self._db.cursor()
 
-        cursor.execute("CREATE TABLE IF NOT EXISTS " + self._table_name + " (user_id INT AUTO_INCREMENT PRIMARY KEY, username varchar(255) UNIQUE, passwd varchar(255), nama varchar(255), email varchar(255), phone_num varchar(255), address varchar(255), apply varchar(255), applicant_reason text, applicant_qualification text, date_applied date, accepted boolean)")
+        cursor.execute("CREATE TABLE IF NOT EXISTS " + self._table_name + " (user_id INT AUTO_INCREMENT PRIMARY KEY, username varchar(255) UNIQUE, passwd varchar(255), nama varchar(255), email varchar(255), phone_num varchar(255), address varchar(255), apply varchar(255), applicant_reason text, applicant_qualification text, date_applied datetime, accepted boolean)")
 
         return "Tabel " + self._table_name + " telah dibuat!"
     
