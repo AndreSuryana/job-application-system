@@ -1,6 +1,6 @@
 import os
-import oop.crud as init
 import database.database as dbase
+import create, read, update, delete
 
 def header():
     print("==================================")
@@ -32,17 +32,13 @@ def main():
         menu = input(">>> ")
 
         if menu == '1':
-            action = init.CRUD()
-            action.create()
+            create.crud.create()
         elif menu == '2':
-            action = init.CRUD()
-            action.read()
+            read.crud.read()
         elif menu == '3':
-            action = init.CRUD()
-            action.update()
+            update.crud.update()
         elif menu == '4':
-            action = init.CRUD()
-            action.delete()
+            delete.crud.delete()
         elif menu == '5':
             print("Exit")
             break
