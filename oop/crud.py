@@ -12,12 +12,12 @@ class CRUD:
         self.create_connection()
 
     def create(self):
-        print("=== Lengkapi Data Diri ===")
+        print("=== Add New User Data ===\n")
         print("Username:")
         username = input()
         print("Password:")
         passwd = input()
-        print("Your Name:")
+        print("Name:")
         nama = input()
         print("Email:")
         email = input()
@@ -45,7 +45,7 @@ class CRUD:
         print(cursor.rowcount, "record telah berhasil masuk.")
 
     def read(self):
-        print("=== Tampilkan Semua Applicant ===")
+        print("=== Show All Applicant ===\n")
 
         cursor = self._db.cursor()
 
@@ -53,19 +53,19 @@ class CRUD:
 
         result = cursor.fetchall()
 
-        for item in result:
-            print(item)
+        for person in result:
+            print(person)
+            print("")
     
     def update(self):
+        print("=== Edit User Data ===")
         print("Search by User ID:")
         user_id = input()
-
-        print("=== Edit Data Diri ===")
         print("Username:")
         username = input()
         print("Password:")
         passwd = input()
-        print("Your Name:")
+        print("Name:")
         nama = input()
         print("Email:")
         email = input()
@@ -85,7 +85,7 @@ class CRUD:
         print(cursor.rowcount, "record telah di update!")
         
     def delete(self):
-        print("=== Delete Data ===")
+        print("=== Delete User Data ===\n")
         print("Search by User ID:")
         user_id = input()
 

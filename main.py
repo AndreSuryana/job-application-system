@@ -8,7 +8,7 @@ def header():
     print("==================================")
     print("Author : Andre Suryana")
     print("NIM    : 1908561103")
-    print("==================================")
+    print("==================================\n")
 
 def main():
     # Executing/creating database :
@@ -32,12 +32,16 @@ def main():
         menu = input(">>> ")
 
         if menu == '1':
+            os.system("cls")
             create.crud.create()
         elif menu == '2':
+            os.system("cls")
             read.crud.read()
         elif menu == '3':
+            os.system("cls")
             update.crud.update()
         elif menu == '4':
+            os.system("cls")
             delete.crud.delete()
         elif menu == '5':
             print("Exit")
