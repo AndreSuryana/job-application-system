@@ -11,7 +11,7 @@ def header():
     print("==================================\n")
 
 def main():
-    # Executing/creating database :
+    # Executing/creating database (same as the 'database/migrate.py')
     db = dbase.Database("uts_crud_oop")
     db.set_host("localhost")
     db.set_username("root")
